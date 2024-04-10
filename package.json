@@ -1,0 +1,18 @@
+{
+  "name": "mumbai-4",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ mumbai-4",
+    "create-local": "graph create --node http://localhost:8020/ mumbai-4",
+    "remove-local": "graph remove --node http://localhost:8020/ mumbai-4",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 mumbai-4",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.69.1",
+    "@graphprotocol/graph-ts": "0.32.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}
