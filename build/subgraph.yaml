@@ -2,7 +2,7 @@ specVersion: 1.0.0
 indexerHints:
   prune: auto
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: ZNSRegistry
@@ -22,7 +22,7 @@ dataSources:
         - Mint
       abis:
         - name: ZNSRegistry
-          file: ./abis/ZNSRegistry.json
+          file: ZNSRegistry/abis/ZNSRegistry.json
       eventHandlers:
         - event: MintedDomain(string,indexed uint256,indexed address,indexed uint256)
           handler: handleMintedDomain
@@ -32,4 +32,4 @@ dataSources:
           handler: handleRenewedDomain
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: ./src/zns-registry.ts
+      file: ZNSRegistry/ZNSRegistry.wasm
